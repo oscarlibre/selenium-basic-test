@@ -22,3 +22,6 @@ Sample tests created with Selenium IDE. The execution can be performed with Sele
 To run your tests locally execute the following from the CLI (e.g using chrome):
 
 `selenium-side-runner -c "browserName=chrome" tests/petstore.side`
+
+![image](https://user-images.githubusercontent.com/2337039/134755493-681c7821-46c5-46da-b60c-5e83a3f179b7.png)
+
