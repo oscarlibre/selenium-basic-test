@@ -1,0 +1,144 @@
+{
+  "id": "85f53fff-41ab-4328-964c-b291c287d81f",
+  "version": "2.0",
+  "name": "https://petstore.octoperf.com/actions/Catalog.action",
+  "url": "https://petstore.octoperf.com",
+  "tests": [{
+    "id": "fbafd268-6eff-496f-b236-3a3b76c88f6b",
+    "name": "t1",
+    "commands": [{
+      "id": "fbe636e5-3828-4ad9-88e6-1a7ba256e500",
+      "comment": "",
+      "command": "open",
+      "target": "/actions/Catalog.action",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "987b647a-2b60-4a39-ad76-fbcf44629ea5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e41ed3e6-ac15-4a86-ac86-998f942c08fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SidebarContent > a:nth-child(1) > img",
+      "targets": [
+        ["css=#SidebarContent > a:nth-child(1) > img", "css:finder"],
+        ["xpath=//div[@id='SidebarContent']/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bbb788e-3baf-4dea-bca5-a547bdace284",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='Catalog']/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Angelfish')]", "xpath:innerText"]
+      ],
+      "value": "Angelfish"
+    }]
+  }, {
+    "id": "7f8dc8f5-6fad-4c41-97f8-f031d7ed00ae",
+    "name": "t2",
+    "commands": [{
+      "id": "8e5ba1be-8f97-47dc-ace9-c68d01475703",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "211b4f67-a073-42b0-87c1-080ecc691d2a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b048430-6585-4e44-b254-a5cabdc1283d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Enter the Store",
+      "targets": [
+        ["linkText=Enter the Store", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Enter the Store')]", "xpath:link"],
+        ["xpath=//div[@id='Content']/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'actions/Catalog.action')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Enter the Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6938718f-211a-48ce-8007-e45ab6de98de",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign In",
+      "targets": [
+        ["linkText=Sign In", "linkText"],
+        ["css=#MenuContent > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//div[@id='MenuContent']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/actions/Account.action?signonForm=')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "849e6f9d-d79a-4d86-9d01-f8a46b568c81",
+      "comment": "",
+      "command": "type",
+      "target": "//input[contains(@name,'username')]",
+      "targets": [
+        ["id=stripes-631868151", "id"],
+        ["name=username", "name"],
+        ["css=#stripes-631868151", "css:finder"],
+        ["xpath=//input[@id='stripes-631868151']", "xpath:attributes"],
+        ["xpath=//div[@id='Catalog']/form/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "omaestre"
+    }, {
+      "id": "bb04e0b9-b339-4730-9b8e-8904c87c13ee",
+      "comment": "",
+      "command": "click",
+      "target": "name=signon",
+      "targets": [
+        ["name=signon", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='signon']", "xpath:attributes"],
+        ["xpath=//div[@id='Catalog']/form/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38ff165d-8314-4f58-80c9-531d2a29802a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=li",
+      "targets": [
+        ["css=li", "css:finder"],
+        ["xpath=//div[@id='Content']/ul/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"]
+      ],
+      "value": "Invalid username or password. Signon failed."
+    }]
+  }],
+  "suites": [{
+    "id": "e8ac1b02-d007-4ea3-a7de-13c2e670ac0d",
+    "name": "suite1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fbafd268-6eff-496f-b236-3a3b76c88f6b", "7f8dc8f5-6fad-4c41-97f8-f031d7ed00ae"]
+  }],
+  "urls": ["https://petstore.octoperf.com/"],
+  "plugins": []
+}
